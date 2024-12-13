@@ -26,7 +26,7 @@ export const GetAllEmployees = async(endpoint) =>{
     }); 
 };
 
-export const CreateEmployee = async(endpoint, payload) =>{
+export const CreateEmployeeList = async(endpoint, payload) =>{
     return await axios.post(`${BASE_URL_EMPLOYEE}/${endpoint}`, payload, {
         headers: {
             Authorization: getAuth()
@@ -52,7 +52,7 @@ export const UpdateEmployee = async(endpoint, payload) =>{
 };
 
 export const DeleteEmployee = async(endpoint) =>{
-    return await axios.del(`${BASE_URL_EMPLOYEE}/${endpoint}`, {
+    return await axios.delete(`${BASE_URL_EMPLOYEE}/${endpoint}`, {
         headers: {
             Authorization: getAuth()
         }
